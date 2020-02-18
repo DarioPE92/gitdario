@@ -16,8 +16,8 @@ Natural (0.7.6) plugins.
 
 ## Scenarios
 
-* 1 - Validate if rock text is diplayed and fill in all form fields and click the submit button
-* 2 - Fill in all form fields unless the field 'Qual é a data do seu nascimento?'
-* 3 - Fill in all form fields unless the field 'Porque você ingressou na área de testes?'
-* 4 - Fill in all form fields unless the field 'Porque você ingressou na área de testes?'
-* 5 - Do not fill in any fields and click the submit button
+* 1 - Validate text "Let's party rock" is diplayed
+* 2 - Validate Fields in Forms when you leave the field "Porque você ingressou na área de testes" in blank
+* 3 - Validate Fields in Forms when you leave the field "Qual é o seu nome ?" in blank
+* 4 - Validate Fields in Forms when you leave the field "Qual é a data do seu nascimento?" in blank
+* 5 - Validate Fields in Forms when you leave all fields in blank
