@@ -12,10 +12,10 @@ public class formObjects {
 	public WebDriver driver;
 
 	@FindBy(xpath = "//*[@class='lfr-ddm-form-page-description']")
-	WebElement lblDescricaoForm;
+	WebElement lblDescriptionForm;
 
 	@FindBy(xpath = "//*[contains(@class,'ddm-field-text form-control') and contains(@name,'Qual…OSeuNome')]")
-	WebElement inputNome;
+	WebElement inputName;
 
 	@FindBy(xpath = "//*[contains(@class,'ddm-field-text form-control') and contains(@name,'PorqueVocÍIngressouNa¡reaDeTestes')]")
 	WebElement inputMenssage;
@@ -27,10 +27,10 @@ public class formObjects {
 	WebElement butSubmit;
 
 	@FindBy(xpath = "//*[contains(@class,'form-feedback-item help-block')]")
-	WebElement lblErro;
+	WebElement lblError;
 	
 	@FindBy(xpath = "//*[contains(@class,'ddm-form-description')]")
-	WebElement lblMsgConfirmacao;
+	WebElement lblMsgConfirmation;
 
 	@FindBy(xpath = "//*[contains(@class,'ddm-form-name')]")
 	WebElement lblFormName;
@@ -41,19 +41,19 @@ public class formObjects {
 		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 30), this);
 	}
 
-	public WebElement lblDescricaoForm() {
-		return (lblDescricaoForm);
+	public WebElement lblDescriptionForm() {
+		return (lblDescriptionForm);
 	}
 
-	public WebElement inputNome() {
-		return (inputNome);
+	public WebElement inputName() {
+		return (inputName);
 	}
 
-	public WebElement inputMensagem() {
+	public WebElement inputMessage() {
 		return (inputMenssage);
 	}
 
-	public WebElement inputData() {
+	public WebElement inputDate() {
 		return (inputDate);
 	}
 
@@ -61,12 +61,12 @@ public class formObjects {
 		return (butSubmit);
 	}
 
-	public WebElement lblErro() {
-		return (lblErro);
+	public WebElement lblError() {
+		return (lblError);
 	}
 	
-	public WebElement lblMsgConfirmacao() {
-		return (lblMsgConfirmacao);
+	public WebElement lblMsgConfirmation() {
+		return (lblMsgConfirmation);
 	}
 
 	public WebElement lblFormName() {

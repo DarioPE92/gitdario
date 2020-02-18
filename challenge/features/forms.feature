@@ -1,10 +1,11 @@
 Feature: Test Forms LifeRay
 
   Scenario Outline: Validate Forms Liferay
-    Given I Open chrome and start application
-    When I Validate if rock text is diplayed
-    When I fill in the required fields "<name>" "<date>" "<message>" and click in submit
-    Then I Validate if the message of success is showup
+    Given Open chrome and start application
+    When Validate if rock text is diplayed
+    And fill in the required fields "<name>" "<date>" "<message>" and click in submit
+    And Validate if the fields are filled
+    Then Validate if the message of success is showup
 
     Examples: 
       | name  | date     | message     |
@@ -12,3 +13,4 @@ Feature: Test Forms LifeRay
       | name2 |          | test 12334  |
       | name3 | 07271993 |             |
       |       | 07271994 | test 123345 |
+      |       |          |             |
