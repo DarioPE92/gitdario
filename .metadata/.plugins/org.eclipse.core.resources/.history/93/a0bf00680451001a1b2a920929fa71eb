@@ -1,0 +1,11 @@
+Feature: Test Forms scenario
+
+Scenario: Test forms
+
+Given Open chrome and start application
+When Validate if Text Let's party rock. is diplayed
+|Nome|Data|Mensagem|
+|teste1|10102020|teste mensagem 1|
+|teste2|10102020|teste mensagem 2|
+|teste3|10102020|teste mensagem 3|
+|teste4|10102020|teste mensagem 4|

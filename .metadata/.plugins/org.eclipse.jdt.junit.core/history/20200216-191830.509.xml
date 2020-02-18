@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testRunner" project="challenge" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="runner.TestRunner" time="24.838">
+    <testsuite name="Test Forms LifeRay" time="24.838">
+      <testcase name="Validate Rock Text" classname="Test Forms LifeRay" time="13.733"/>
+      <testcase name="Fill in all Fields" classname="Test Forms LifeRay" time="11.105">
+        <skipped>io.cucumber.junit.UndefinedStepException: The step "Fill in all Fields" is undefined. You can implement it using tne snippet(s) below:
+
+@When("Fill in all Fields")
+public void fill_in_all_Fields() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+Some other steps were also undefined:
+
+@Then("Click on Submit Button")
+public void click_on_Submit_Button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</skipped>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

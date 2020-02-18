@@ -1,0 +1,13 @@
+Feature: Test Forms LifeRay
+
+  Scenario: Validate Rock Text
+    Given Open chrome and start application
+    When Validate if Text Lets party rock. is diplayed
+
+  Scenario: Fill in all Fields
+    Given Open chrome and start application
+    When Fill in all Fields |Name|Date|Mensagem|
+|teste1|10102020|teste mensagem 1|
+|teste2|10102020|teste mensagem 2|
+|teste3|10102020|teste mensagem 3|
+|teste4|10102020|teste mensagem 4|

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testRunner" project="challenge" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="runner.TestRunner" time="11.971">
+    <testsuite name="Test Forms" time="11.971">
+      <testcase name="Open Forms" classname="Test Forms" time="11.971">
+        <error>java.lang.NullPointerException&#13;
+	at java.base/java.util.Objects.requireNonNull(Objects.java:221)&#13;
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:106)&#13;
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:85)&#13;
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)&#13;
+	at actions.actionsForm.validateText(actionsForm.java:22)&#13;
+	at stepDefinition.FormTest.validate_if_Text_Let_s_party_rock_is_diplayed(FormTest.java:31)&#13;
+	at ✽.Validate if Text Lets party rock. is diplayed(file:///C:/ws-liferay/challenge/features/forms.feature:5)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

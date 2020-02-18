@@ -1,0 +1,53 @@
+package stepDefination;
+
+import java.util.List;
+import java.util.Map;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import actions.actionsForm;
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import utils.constants;
+import utils.seleniumUtils;
+
+public class FormTest {
+
+	WebDriver driver;
+	seleniumUtils utilSelenium = new seleniumUtils();
+	constants varConstantes = new constants();
+	actionsForm acoesForm = new actionsForm();
+
+	@Given("Open chrome and start application")
+	public void open_chrome_and_start_application() {
+
+		driver = seleniumUtils.startBrowser(driver, "chrome",
+				"https://forms.liferay.com/web/forms/shared/-/form/122548");
+
+		throw new io.cucumber.java.PendingException();
+	}
+
+	@When("Validate if Text Let's Rock is diplayed")
+	public void validate_if_Text_Let_s_Rock_is_diplayed(DataTable tabela) {
+
+		List<Map<String, String>> list = tabela.asMaps(String.class, String.class);
+		String name = null, date = null, menssage = null;
+		for (int i = 0; i < list.size(); i++) {
+			name = list.get(i).get("Name");
+			date = list.get(i).get("Date");
+			menssage = list.get(i).get("Menssage");
+
+			throw new io.cucumber.java.PendingException();
+		}
+	}
+
+	@Then("User should see the text Let's Rock")
+	public void user_should_see_the_text_Let_s_Rock() {
+
+		throw new io.cucumber.java.PendingException();
+	}
+
+}

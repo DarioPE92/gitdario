@@ -1,0 +1,37 @@
+package stepDefinition;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class FormTest {
+
+	WebDriver driver;
+	
+	@Given("Open chrome and start application")
+	public void open_chrome_and_start_application() {
+	   
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://forms.liferay.com/web/forms/shared/-/form/122548");
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("Validate if Text Let's Rock is diplayed")
+	public void validate_if_Text_Let_s_Rock_is_diplayed() {
+	    
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User should see the text Let's Rock")
+	public void user_should_see_the_text_Let_s_Rock() {
+	    
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+}

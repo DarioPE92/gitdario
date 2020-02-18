@@ -1,0 +1,6 @@
+Feature: Test Forms scenario
+
+Scenario: Test forms
+Given : Open chrome and start application
+When : Validate if Text Let's Rock is diplayed
+Then : User should see the text Let's Rock

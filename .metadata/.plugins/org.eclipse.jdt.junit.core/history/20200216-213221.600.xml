@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testRunner" project="challenge" tests="1" started="1" failures="1" errors="0" ignored="0">
+  <testsuite name="runner.TestRunner" time="17.974">
+    <testsuite name="Test Forms LifeRay" time="17.974">
+      <testcase name="Validate Forms Liferay" classname="Test Forms LifeRay" time="17.974">
+        <failure>java.lang.AssertionError: Erro no envio do formulário.&#13;
+	at org.junit.Assert.fail(Assert.java:89)&#13;
+	at actions.actionsForm.validaEnvioForm(actionsForm.java:92)&#13;
+	at stepDefinition.FormTest.i_Validate_if_the_message_of_success_is_showup(FormTest.java:45)&#13;
+	at ✽.I Validate if the message of success is showup(file:///C:/ws-liferay/challenge/features/forms.feature:7)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

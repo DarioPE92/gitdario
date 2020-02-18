@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testRunner" project="challenge" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="runner.TestRunner" time="13.606">
+    <testsuite name="Test Forms LifeRay" time="13.606">
+      <testcase name="Validate Forms Liferay" classname="Test Forms LifeRay" time="13.606">
+        <error>java.lang.IllegalArgumentException: Key Down / Up events only make sense for modifier keys.&#13;
+	at org.openqa.selenium.interactions.internal.SingleKeyAction.&lt;init&gt;(SingleKeyAction.java:49)&#13;
+	at org.openqa.selenium.interactions.internal.SingleKeyAction.&lt;init&gt;(SingleKeyAction.java:37)&#13;
+	at org.openqa.selenium.interactions.KeyDownAction.&lt;init&gt;(KeyDownAction.java:40)&#13;
+	at org.openqa.selenium.interactions.Actions.keyDown(Actions.java:115)&#13;
+	at actions.actionsForm.fillInForm(actionsForm.java:50)&#13;
+	at stepDefinition.FormTest.i_fill_in_the_required_fields_and_click_in_submit(FormTest.java:40)&#13;
+	at ✽.I fill in the required fields "name1" "07271992" "Fail" and click in submit(file:///C:/ws-liferay/challenge/features/forms.feature:6)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

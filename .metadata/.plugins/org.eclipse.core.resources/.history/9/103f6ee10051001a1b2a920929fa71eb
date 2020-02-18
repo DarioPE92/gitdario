@@ -1,0 +1,44 @@
+package stepDefination;
+
+import java.util.List;
+import java.util.Map;
+
+import org.openqa.selenium.WebDriver;
+import actions.actionsForm;
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import utils.constants;
+import utils.seleniumUtils;
+
+public class FormTest {
+
+	WebDriver driver;
+	seleniumUtils utilSelenium = new seleniumUtils();
+	constants varConstants = new constants();
+	actionsForm formActions = new actionsForm();
+
+	@Given("Open chrome and start application")
+	public void open_chrome_and_start_application() {
+
+		driver = seleniumUtils.startBrowser(driver, "chrome",
+				"https://forms.liferay.com/web/forms/shared/-/form/122548");
+	}
+
+	@When("Validate if Text Let's Rock is diplayed")
+	public void validate_if_Text_Let_s_Rock_is_diplayed(DataTable tabela) throws Throwable {
+
+		List<Map<String, String>> list = tabela.asMaps(String.class, String.class);
+		String name = null, date = null, message = null;
+		for (int i = 0; i < list.size(); i++) {
+			name = list.get(i).get("Name");
+			date = list.get(i).get("Date");
+			message = list.get(i).get("Message");
+
+			formActions.validateText(name, date, message);
+
+		}
+
+	}
+
+}

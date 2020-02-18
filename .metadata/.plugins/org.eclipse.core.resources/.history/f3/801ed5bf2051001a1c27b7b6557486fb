@@ -1,0 +1,95 @@
+package actions;
+
+import java.util.List;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import pageObjects.formObjects;
+
+public class actionsForm {
+
+	
+
+	public void validateText(WebDriver driver) throws InterruptedException {
+		
+		formObjects objForm = new formObjects(driver);
+		
+		new WebDriverWait(driver, 10).until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//*[contains(@class,'lfr-ddm-form-page-description')]")));
+
+		if (objForm.lblDescricaoForm().getAttribute("innerHTML").toString().equalsIgnoreCase("Let's party rock.")) {
+
+			System.out.println("The text 'Lets celebrate rock.' Appeared");
+
+		} else {
+
+			Assert.fail("Erro! o texto 'Let's party rock.' não está presente no formulário.");
+		}
+
+	}
+
+	
+	public void fillInForm(WebDriver driver, String name, String date, String message) throws InterruptedException {
+		
+		formObjects objForm = new formObjects(driver);
+		objForm.inputNome().sendKeys(name);
+		objForm.inputData().click();
+		Thread.sleep(1000);
+		objForm.inputData().sendKeys(Keys.HOME);
+		objForm.inputData().sendKeys(Keys.TAB);
+	    Thread.sleep(1000);
+		objForm.inputData().sendKeys(date);
+		objForm.inputMensagem().sendKeys(message);
+		Thread.sleep(1000);
+		objForm.butSubmit().click();
+
+	}
+
+	public void validateFields(WebDriver driver) throws InterruptedException {
+
+		List<WebElement> erros = driver.findElements(By.xpath("//*[contains(@class,'form-feedback-item help-block')]"));
+		int totalError = erros.size();
+
+		if (totalError > 0) {
+			for (int i = 0; i < totalError; i++) {
+
+					Assert.fail("Error - Field not Filled");
+			}
+
+		}
+
+	}
+	
+
+		public boolean validaEnvioForm(WebDriver driver, int timeout) throws InterruptedException {
+			boolean sucesso = false;
+			formObjects objForm = new formObjects(driver);
+			try {
+				Thread.sleep(2000);
+				WebDriverWait wait = new WebDriverWait(driver, timeout);
+				wait.until(ExpectedConditions.elementToBeClickable(objForm.lblFormName()));
+
+				if (objForm.lblFormName().isDisplayed() && objForm.lblMsgConfirmacao().getAttribute("innerHTML")
+						.toString().equalsIgnoreCase("Informações enviadas com sucesso!")) {
+					sucesso = true;
+				} else {
+
+					Assert.fail("Erro no envio do formulário.");
+				}
+
+			} catch (NoSuchElementException ex) {
+				System.out.println("Formulário não enviado!");
+
+			} finally {
+				driver.navigate().back();
+			}
+			return sucesso;
+		}
+	}

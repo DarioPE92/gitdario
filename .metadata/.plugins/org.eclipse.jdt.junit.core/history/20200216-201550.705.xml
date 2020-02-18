@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testRunner" project="challenge" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="runner.TestRunner" time="12.963">
+    <testsuite name="Test Forms LifeRay" time="12.963">
+      <testcase name="Validate Forms Liferay" classname="Test Forms LifeRay" time="12.963">
+        <skipped>io.cucumber.junit.UndefinedStepException: The step "I fill in the required fields name1 07272017 Fail and click in submit" is undefined. You can implement it using tne snippet(s) below:
+
+@When("I fill in the required fields name1 {int} Fail and click in submit")
+public void i_fill_in_the_required_fields_name1_Fail_and_click_in_submit(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+Some other steps were also undefined:
+
+@Then("I Validate if the message of success is showup")
+public void i_Validate_if_the_message_of_success_is_showup() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</skipped>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

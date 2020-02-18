@@ -1,0 +1,13 @@
+#Author: your.email@your.domain.com
+#Keywords Summary :
+#Feature: List of scenarios.
+#Scenario: Business rule through list of steps with arguments.
+#Given: Some precondition step
+#When: Some key actions
+
+Feature: Test Forms
+ 
+  Scenario: Title of your scenario
+    Given Open chrome and start application
+    When Validate if Text Let's party rock. is diplayed
+   

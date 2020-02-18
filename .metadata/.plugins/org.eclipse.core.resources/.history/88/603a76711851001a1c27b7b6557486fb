@@ -1,0 +1,75 @@
+package pageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+
+
+public class formObjects {
+
+	public WebDriver driver;
+
+	@FindBy(xpath = "//*[@class='lfr-ddm-form-page-description']")
+	WebElement lblDescricaoForm;
+
+	@FindBy(xpath = "//*[contains(@class,'ddm-field-text form-control') and contains(@name,'Qual…OSeuNome')]")
+	WebElement inputNome;
+
+	@FindBy(xpath = "//*[contains(@class,'field form-control') and contains(@id,'PorqueVocÍIngressouNa¡reaDeTeste')]")
+	WebElement inputMenssage;
+
+	@FindBy(xpath = "//div[@class='iinput-group-item']//*[contains(@class,'form-control') and contains(@type,'text')]")
+	WebElement inputDate;
+
+	@FindBy(xpath = "//*[contains(@class,'btn btn-primary lfr-ddm-form-submit pull-right') and contains(@type,'submit')]")
+	WebElement butSubmit;
+
+	@FindBy(xpath = "//*[contains(@class,'form-feedback-item help-block')]")
+	WebElement lblErro;
+	
+	@FindBy(xpath = "//*[contains(@class,'ddm-form-description')]")
+	WebElement lblMsgConfirmacao;
+
+	@FindBy(xpath = "//*[contains(@class,'ddm-form-name')]")
+	WebElement lblFormName;
+
+	public formObjects(WebDriver driver) {
+
+		this.driver = driver;
+		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 30), this);
+	}
+
+	public WebElement lblDescricaoForm() {
+		return (lblDescricaoForm);
+	}
+
+	public WebElement inputNome() {
+		return (inputNome);
+	}
+
+	public WebElement inputMensagem() {
+		return (inputMenssage);
+	}
+
+	public WebElement inputData() {
+		return (inputDate);
+	}
+
+	public WebElement butSubmit() {
+		return (butSubmit);
+	}
+
+	public WebElement lblErro() {
+		return (lblErro);
+	}
+	
+	public WebElement lblMsgConfirmacao() {
+		return (lblMsgConfirmacao);
+	}
+
+	public WebElement lblFormName() {
+		return (lblFormName);
+	}
+}

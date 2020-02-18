@@ -1,0 +1,6 @@
+Feature: Test Forms
+ 
+  Scenario: Title of your scenario
+    Given Open chrome and start application
+    When Validate if Text Lets party rock. is diplayed
+   

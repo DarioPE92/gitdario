@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testRunner" project="challenge" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="runner.TestRunner" time="12.967">
+    <testsuite name="Test Forms LifeRay" time="12.967">
+      <testcase name="Validate Forms Liferay" classname="Test Forms LifeRay" time="12.967">
+        <skipped>io.cucumber.junit.UndefinedStepException: The step "I fill in the required fields "name1" "07272017" "Fail" and click in submit" is undefined. You can implement it using tne snippet(s) below:
+
+@When("I fill in the required fields {string} {string} {string} and click in submit")
+public void i_fill_in_the_required_fields_and_click_in_submit(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}&#13;
+&#13;
+</skipped>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>
